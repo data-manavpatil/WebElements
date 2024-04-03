@@ -17,7 +17,9 @@ This repository serves as a collection of simple yet engaging web design project
 
 - HTML
 - CSS
-- JavaScript 
+- JavaScript
+- jQuery
+- Bootstrap 
 
 ## How to Get Started
 
