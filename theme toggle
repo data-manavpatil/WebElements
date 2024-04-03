@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggle</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles for toggle */
+    .toggle {
+      width: 60px;
+      height: 30px;
+      background-color: #6c757d;
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    input[type="checkbox"]:checked + .toggle::before {
+      transform: translateX(30px);
+    }
+
+    .toggle::after {
+      content: '🌙';
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    input[type="checkbox"]:checked + .toggle::after {
+      content: '☀️';
+      right: unset;
+      left: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="form-group">
+    <!-- Change the position of the input element -->
+    <input type="checkbox" id="themeToggle" style="display: none;">
+    <div class="toggle" onclick="toggleTheme()">
+      <!-- Move the checkbox inside the toggle div -->
+      <input type="checkbox" id="themeToggle" style="display: none;">
+    </div>
+  </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Function to toggle the theme
+  function toggleTheme() {
+    var checkbox = document.getElementById("themeToggle");
+    checkbox.checked = !checkbox.checked;
+    if (checkbox.checked) {
+      // Dark theme
+      $('body').addClass('bg-dark text-light');
+    } else {
+      // Light theme
+      $('body').removeClass('bg-dark text-light');
+    }
+  }
+</script>
+</body>
+</html>
