@@ -1,6 +1,6 @@
-# Web development components
+# WebElements
 
-Welcome to "Web development components" on GitHub! This repository is dedicated to beginner-friendly web devlopment components projects designed for learning. Dive into interactive web solutions with simple interfaces and functionalities, engage with the code, and enjoy the journey of learning web development!
+Welcome to **WebElements** on GitHub! This repository is dedicated to beginner-friendly web development components projects designed for learning. Dive into interactive web solutions with simple interfaces and functionalities, engage with the code, and enjoy the journey of learning web development!
 
 ## Overview
 
